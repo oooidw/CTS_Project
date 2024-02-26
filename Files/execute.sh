@@ -21,7 +21,7 @@ if [ $? -eq 0 ]; then
 
     pip install pandas matplotlib -y
 
-    ./script.py "$filename"
+    script.py "$filename"
 
 
 else
