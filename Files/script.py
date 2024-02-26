@@ -1,4 +1,4 @@
-#!/usr/bin/miniconda3/envs/myenv/bin/python3
+#!/root/miniconda3/envs/myenv/bin/python3
 
 import sys
 import warnings

@@ -19,10 +19,11 @@ if [ $? -eq 0 ]; then
 
     conda activate myenv
 
-    pip install pandas matplotlib -y
+    conda install pandas matplotlib
 
     script.py "$filename"
 
+    deactivate
 
 else
     echo "An error occurred while downloading the file."
