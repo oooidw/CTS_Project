@@ -14,8 +14,16 @@ wget -O "$local_path" "$github_url"
 
 if [ $? -eq 0 ]; then
     echo "File downloaded successfully."
-    mkdir -p "/Images"
-    script.py "$filename"
+
+    conda create -n myenv python=3.10 -y
+
+    conda activate myenv
+
+    pip install pandas matplotlib -y
+
+    ./script.py "$filename"
+
+
 else
     echo "An error occurred while downloading the file."
 fi

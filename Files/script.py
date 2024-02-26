@@ -1,31 +1,16 @@
-#/usr/bin/python
+#!/usr/bin/miniconda3/envs/myenv/bin/python3
 
 import sys
 import warnings
-import importlib
-import subprocess
 
 warnings.filterwarnings("ignore")
 
-def check_and_install(module_name):
-    try:
-        importlib.import_module(module_name)
-    except ImportError:
-        print(f"{module_name} is not installed. Installing...")
-        subprocess.check_call(["pip", "install", module_name])
-        print(f"{module_name} has been successfully installed.")
-
-# Modules to check and install
-modules_to_check = ["matplotlib", "pandas"]
-
-for module_name in modules_to_check:
-    check_and_install(module_name)
-
-import pandas as pd
 import matplotlib.pyplot as plt
+import pandas as pd
 
 
-def main():
+def main():    
+
     print("Genereting plots...")
 
     if len(sys.argv) < 2:
