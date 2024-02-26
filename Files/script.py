@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+#/usr/bin/python
 
 import sys
 import warnings
@@ -42,6 +42,7 @@ def main():
     ######################
     # First plot
     ######################
+    plt.figure("Scatter Plot")
     n_col = 10
     l = len(df)
 
@@ -61,28 +62,30 @@ def main():
     plt.ylabel(r"M_ass")
     plt.xlabel(r"b-y")
     plt.gca().invert_yaxis()
-    plt.savefig('Images/Scatter.png')
-    plt.clf()
+    #plt.savefig('Images/Scatter.png')
+    #plt.clf()
 
 
 
     ######################
     # A variation on the first plot
     ######################
+    plt.figure("Scatter Optional")
     plt.gca().invert_yaxis()
     plt.ylabel(r"M_ass")
     plt.xlabel(r"b-y")
     plt.scatter(x,y,c=c,s=4)
     cbar = plt.colorbar()
     cbar.set_label("Gyr")
-    plt.savefig('Images/Scatter_optional.png')
-    plt.clf()
+    #plt.savefig('Images/Scatter_optional.png')
+    #plt.clf()
 
 
 
     ######################
     # Second plot
     ######################
+    plt.figure("Histogram plot 1")
     n = [1,5]
     h = []
     n_bins = 17
@@ -102,14 +105,15 @@ def main():
     plt.hist(h[-1],density=True, **kwargs, label="age_parant > {:.1f} Gyr".format(n[-1]))
 
     plt.legend()
-    plt.savefig('Images/Histogram1.png')
-    plt.clf()
+    #plt.savefig('Images/Histogram1.png')
+    #plt.clf()
 
 
 
     ######################
     # Third plot
     ######################
+    plt.figure("Histogram plot 2")
     h = []
     n_bins = 15
 
@@ -128,10 +132,10 @@ def main():
     plt.hist(h[-1],density=True, **kwargs, label="age_parant > {:.1f} Gyr".format(n[-1]))
 
     plt.legend()
-    plt.savefig('Images/Histogram2.png')
+    #plt.savefig('Images/Histogram2.png')
 
-
-    print("Plots saved in /Images/")
+    plt.show()
+    #print("Plots saved in /Images/")
 
 
 if __name__ == "__main__":
