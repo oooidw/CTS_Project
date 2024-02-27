@@ -5,7 +5,7 @@ clear
 APP_NAME="my_application"
 
 INSTALL_DIR="/opt/$APP_NAME"
-mkdir -p "$INSTALL_DIR"
+mkdir -p "$INSTALL_DIR/Images"
 
 wget -O "$INSTALL_DIR/execute.sh" "https://raw.githubusercontent.com/oooidw/Esame_Ab_Inf/main/Files/execute.sh" 
 wget -O "$INSTALL_DIR/script.py" "https://raw.githubusercontent.com/oooidw/Esame_Ab_Inf/main/Files/script.py"
@@ -18,4 +18,4 @@ echo "export PATH=\$PATH:$INSTALL_DIR" >> ~/.bashrc
 
 source ~/.bashrc
 
-echo "Installation completed successfully. The application is now ready to be executed with a single command."
+echo "Installation completed successfully. To run the application type 'execute.sh'."

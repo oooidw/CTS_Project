@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 
 import sys
+import os
 import warnings
 
 warnings.filterwarnings("ignore")
@@ -47,7 +48,7 @@ def main():
     plt.ylabel(r"M_ass")
     plt.xlabel(r"b-y")
     plt.gca().invert_yaxis()
-    #plt.savefig('Images/Scatter.png')
+    plt.savefig('Images/Scatter.png')
 
 
 
@@ -62,7 +63,7 @@ def main():
     plt.scatter(x,y,c=c,s=4)
     cbar = plt.colorbar()
     cbar.set_label("Gyr")
-    #plt.savefig('Images/Scatter_optional.png')
+    plt.savefig('Images/Scatter_optional.png')
 
 
 
@@ -89,7 +90,7 @@ def main():
     plt.hist(h[-1],density=True, **kwargs, label="age_parant > {:.1f} Gyr".format(n[-1]))
 
     plt.legend()
-    #plt.savefig('Images/Histogram1.png')
+    plt.savefig('Images/Histogram1.png')
 
 
 
@@ -115,10 +116,10 @@ def main():
     plt.hist(h[-1],density=True, **kwargs, label="age_parant > {:.1f} Gyr".format(n[-1]))
 
     plt.legend()
-    #plt.savefig('Images/Histogram2.png')
+    plt.savefig('Images/Histogram2.png')
 
     plt.show()
-    print("Plots saved in /Images/")
+    print("Plots saved in /opt/my_application/Images")
 
 
 if __name__ == "__main__":
