@@ -7,7 +7,7 @@ read filename
 
 github_url="https://raw.githubusercontent.com/MilenaValentini/TRM_Dati/main/$filename"
 
-local_path="./$filename"
+local_path="~/opt/my_application"
 
 echo "Downloading file $filename..."
 wget -O "$local_path" "$github_url"
