@@ -29,7 +29,7 @@ if [ $? -eq 0 ]; then
         exit 1
     fi 
 
-    python script.py "$filename"
+    script.py "$filename"
 
 else
     echo "An error occurred while downloading the file."
