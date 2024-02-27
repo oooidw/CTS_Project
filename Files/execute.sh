@@ -15,15 +15,21 @@ wget -O "$local_path" "$github_url"
 if [ $? -eq 0 ]; then
     echo "File downloaded successfully."
 
-    conda create -n myenv python=3.10 -y
+    if python3 -c 'import matplotlib' &> /dev/null; then
+        echo "matplotlib ok"
+    else
+        echo "ERROR: matplotlib is not installed."
+        exit 1
+    fi
 
-    conda activate myenv
-
-    conda install pandas matplotlib
+    if python3 -c 'import pandas' &> /dev/null; then
+        echo "pandas ok"
+    else
+        echo "ERROR: pandas is not installed."
+        exit 1
+    fi 
 
     script.py "$filename"
-
-    deactivate
 
 else
     echo "An error occurred while downloading the file."

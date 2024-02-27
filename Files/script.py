@@ -1,4 +1,4 @@
-#!/root/miniconda3/envs/myenv/bin/python3
+#!/usr/bin/python3
 
 import sys
 import warnings
@@ -11,13 +11,13 @@ import pandas as pd
 
 def main():    
 
-    print("Genereting plots...")
-
     if len(sys.argv) < 2:
         print()
         print("Error -> ","Usage: python script.py <string>")
         return
     string_argument = sys.argv[1]
+
+    print("Genereting plots...")
 
 
     df = pd.read_csv(string_argument, delimiter=" ",usecols=[0,1,4,8,12],names=["MsuH","m_ini","M_ass","b-y","age_parent"],skiprows=1)
@@ -48,7 +48,7 @@ def main():
     plt.xlabel(r"b-y")
     plt.gca().invert_yaxis()
     #plt.savefig('Images/Scatter.png')
-    #plt.clf()
+
 
 
 
@@ -63,7 +63,6 @@ def main():
     cbar = plt.colorbar()
     cbar.set_label("Gyr")
     #plt.savefig('Images/Scatter_optional.png')
-    #plt.clf()
 
 
 
@@ -91,7 +90,6 @@ def main():
 
     plt.legend()
     #plt.savefig('Images/Histogram1.png')
-    #plt.clf()
 
 
 
@@ -120,7 +118,7 @@ def main():
     #plt.savefig('Images/Histogram2.png')
 
     plt.show()
-    #print("Plots saved in /Images/")
+    print("Plots saved in /Images/")
 
 
 if __name__ == "__main__":
