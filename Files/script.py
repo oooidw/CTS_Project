@@ -1,5 +1,5 @@
 #!/usr/bin/python
-#/usr/bin/python
+
 import sys
 import os
 import warnings
@@ -48,7 +48,7 @@ def main():
     plt.ylabel(r"M_ass")
     plt.xlabel(r"b-y")
     plt.gca().invert_yaxis()
-    plt.savefig('Images/Scatter.png')
+    plt.savefig('/opt/my_application/Images/Scatter.png')
 
 
 
@@ -63,7 +63,7 @@ def main():
     plt.scatter(x,y,c=c,s=4)
     cbar = plt.colorbar()
     cbar.set_label("Gyr")
-    plt.savefig('Images/Scatter_optional.png')
+    plt.savefig('/opt/my_application/Images/Scatter_optional.png')
 
 
 
@@ -90,7 +90,7 @@ def main():
     plt.hist(h[-1],density=True, **kwargs, label="age_parant > {:.1f} Gyr".format(n[-1]))
 
     plt.legend()
-    plt.savefig('Images/Histogram1.png')
+    plt.savefig('/opt/my_application/Images/Histogram1.png')
 
 
 
@@ -116,7 +116,7 @@ def main():
     plt.hist(h[-1],density=True, **kwargs, label="age_parant > {:.1f} Gyr".format(n[-1]))
 
     plt.legend()
-    plt.savefig('Images/Histogram2.png')
+    plt.savefig('/opt/my_application/Images/Histogram2.png')
 
     print("Plots saved in /opt/my_application/Images")
 
