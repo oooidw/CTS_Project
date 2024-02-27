@@ -7,7 +7,7 @@ read filename
 
 github_url="https://raw.githubusercontent.com/MilenaValentini/TRM_Dati/main/$filename"
 
-local_path="~/opt/my_application"
+local_path="/opt/my_application/$filename"
 
 echo "Downloading file $filename..."
 wget -O "$local_path" "$github_url"
@@ -29,7 +29,7 @@ if [ $? -eq 0 ]; then
         exit 1
     fi 
 
-    script.py "$filename"
+    python script.py "$filename"
 
 else
     echo "An error occurred while downloading the file."

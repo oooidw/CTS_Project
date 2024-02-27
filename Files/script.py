@@ -1,5 +1,5 @@
-#!/usr/bin/python3
-
+#!/usr/bin/python
+#/usr/bin/python
 import sys
 import os
 import warnings
@@ -118,7 +118,6 @@ def main():
     plt.legend()
     plt.savefig('Images/Histogram2.png')
 
-    plt.show()
     print("Plots saved in /opt/my_application/Images")
 
 
