@@ -5,7 +5,9 @@ The following packages are necessary for the execution of the python script:
 * Matplotlib
 * Pandas
 The installetion of the script che be done by simply installing the "installation.sh" file and executing the following commands:
-`chmod +x installation.sh`
-`./installation.sh`
+```Console
+User@COMPUTER:~$ chmod +x installation.sh
+User@COMPUTER:~$ ./installation.sh
+```
 ## Use 
 ## Examples
