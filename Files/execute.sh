@@ -7,10 +7,10 @@ read filename
 
 github_url="https://raw.githubusercontent.com/MilenaValentini/TRM_Dati/main/$filename"
 
-local_path="/opt/my_application/$filename"
+local_path=~/my_application/$filename
 
 echo "Downloading file $filename..."
-wget -O "$local_path" "$github_url"
+wget -O $local_path "$github_url"
 
 if [ $? -eq 0 ]; then
     echo "File downloaded successfully."
