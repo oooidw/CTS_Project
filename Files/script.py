@@ -9,6 +9,7 @@ warnings.filterwarnings("ignore")
 import matplotlib.pyplot as plt
 import pandas as pd
 
+home_directory = os.path.expanduser("~")
 
 def main():    
 
@@ -20,10 +21,10 @@ def main():
 
     print("Genereting plots...")
 
-    path = '~/my_application/Images/'
+    path = home_directory+'/my_application/Images/'
 
 
-    df = pd.read_csv('~/my_application/',string_argument, delimiter=" ",usecols=[0,1,4,8,12],names=["MsuH","m_ini","M_ass","b-y","age_parent"],skiprows=1)
+    df = pd.read_csv(home_directory+'/my_application/'+string_argument, delimiter=" ",usecols=[0,1,4,8,12],names=["MsuH","m_ini","M_ass","b-y","age_parent"],skiprows=1)
     df = df.sort_values(by=["age_parent"])
 
 
@@ -50,7 +51,7 @@ def main():
     plt.ylabel(r"M_ass")
     plt.xlabel(r"b-y")
     plt.gca().invert_yaxis()
-    plt.savefig(path,'Scatter.png')
+    plt.savefig(path+'Scatter.png')
 
 
 
@@ -65,7 +66,7 @@ def main():
     plt.scatter(x,y,c=c,s=4)
     cbar = plt.colorbar()
     cbar.set_label("Gyr")
-    plt.savefig(path,'Scatter_optional.png')
+    plt.savefig(path+'Scatter_optional.png')
 
 
 
@@ -92,7 +93,7 @@ def main():
     plt.hist(h[-1],density=True, **kwargs, label="age_parant > {:.1f} Gyr".format(n[-1]))
 
     plt.legend()
-    plt.savefig(path,'Histogram1.png')
+    plt.savefig(path+'Histogram1.png')
 
 
 
@@ -118,9 +119,9 @@ def main():
     plt.hist(h[-1],density=True, **kwargs, label="age_parant > {:.1f} Gyr".format(n[-1]))
 
     plt.legend()
-    plt.savefig(path,'Histogram2.png')
+    plt.savefig(path+'Histogram2.png')
 
-    print("Plots saved in /opt/my_application/Images")
+    print("Plots saved in /my_application/Images")
 
 
 if __name__ == "__main__":
