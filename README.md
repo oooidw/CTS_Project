@@ -2,8 +2,8 @@
 This repository was created as the project for the exam of abilità informatiche @ UniTs 2023/2024.
 ## Installation
 The following packages are necessary for the execution of the python script:
-* Matplotlib
-* Pandas
+* `Matplotlib`
+* `Pandas`
 
 The installetion of the script che be done by simply installing the "installation.sh" file and executing the following commands:
 ```Console
