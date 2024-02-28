@@ -18,10 +18,10 @@ User@COMPUTER:~$ execute.sh
 ## Examples
 The script produces the following plots:
 <p align="center">
-  <img width="600" src="https://github.com/oooidw/Esame_Ab_Inf/blob/main/Images/Scatter">
+  <img width="600" src="https://github.com/oooidw/Esame_Ab_Inf/blob/main/Images/Scatter.png">
 </p>
 <p align="center">
-  <img width="600" src="https://github.com/oooidw/Esame_Ab_Inf/blob/main/Images/Scatter_optional">
+  <img width="600" src="https://github.com/oooidw/Esame_Ab_Inf/blob/main/Images/Scatter_optional.png">
 </p>
 <p align="center">
   <img width="600" src="https://github.com/oooidw/Esame_Ab_Inf/blob/main/Images/Histogram1.png">
