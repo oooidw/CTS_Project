@@ -23,7 +23,7 @@ def main():
     path = '~/my_application/Images/'
 
 
-    df = pd.read_csv(string_argument, delimiter=" ",usecols=[0,1,4,8,12],names=["MsuH","m_ini","M_ass","b-y","age_parent"],skiprows=1)
+    df = pd.read_csv('~/my_application/',string_argument, delimiter=" ",usecols=[0,1,4,8,12],names=["MsuH","m_ini","M_ass","b-y","age_parent"],skiprows=1)
     df = df.sort_values(by=["age_parent"])
 
 
