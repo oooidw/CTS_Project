@@ -121,7 +121,7 @@ def main():
     plt.legend()
     plt.savefig(path+'Histogram2.png')
 
-    print("Plots saved in /my_application/Images")
+    print("Plots saved in ~/my_application/Images")
 
 
 if __name__ == "__main__":
