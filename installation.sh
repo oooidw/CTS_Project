@@ -2,10 +2,11 @@
 
 clear
 
-APP_NAME="my_application"
+APP_NAME=my_application
 
-INSTALL_DIR="/opt/$APP_NAME"
-mkdir -p "$INSTALL_DIR/Images"
+INSTALL_DIR=$APP_NAME
+mkdir ~/$APP_NAME
+mkdir ~/$APP_NAME/Images
 
 wget -O "$INSTALL_DIR/execute.sh" "https://raw.githubusercontent.com/oooidw/Esame_Ab_Inf/main/Files/execute.sh" 
 wget -O "$INSTALL_DIR/script.py" "https://raw.githubusercontent.com/oooidw/Esame_Ab_Inf/main/Files/script.py"
