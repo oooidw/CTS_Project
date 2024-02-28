@@ -5,7 +5,7 @@ The following packages are necessary for the execution of the python script:
 * `Matplotlib`
 * `Pandas`
 
-The installation of the script che be done by simply installing the [installation.sh](https://raw.githubusercontent.com/oooidw/Esame_Ab_Inf/main/installation.sh) file and executing the following commands:
+The installation of the script che be done by simply installing the [installation.sh](https://github.com/oooidw/Esame_Ab_Inf/blob/main/installation.sh) file and executing the following commands:
 ```Console
 User@COMPUTER:~$ chmod +x installation.sh
 User@COMPUTER:~$ ./installation.sh
