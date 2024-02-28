@@ -14,8 +14,8 @@ wget -O "$INSTALL_DIR/script.py" "https://raw.githubusercontent.com/oooidw/Esame
 chmod +x "$INSTALL_DIR/execute.sh"
 chmod +x "$INSTALL_DIR/script.py"
 
-echo "export PYTHONPATH=\$PYTHONPATH:$INSTALL_DIR/" >> ~/.bashrc
-echo "export PATH=\$PATH:$INSTALL_DIR/" >> ~/.bashrc
+echo export "PYTHONPATH=\$PYTHONPATH:$INSTALL_DIR/" >> ~/.bashrc
+echo export "PATH=\$PATH:$INSTALL_DIR/" >> ~/.bashrc
 
 source ~/.bashrc
 

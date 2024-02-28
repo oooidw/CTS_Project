@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 
 import sys
 import os
@@ -19,6 +19,8 @@ def main():
     string_argument = sys.argv[1]
 
     print("Genereting plots...")
+
+    path = '~/my_application/Images/'
 
 
     df = pd.read_csv(string_argument, delimiter=" ",usecols=[0,1,4,8,12],names=["MsuH","m_ini","M_ass","b-y","age_parent"],skiprows=1)
@@ -48,7 +50,7 @@ def main():
     plt.ylabel(r"M_ass")
     plt.xlabel(r"b-y")
     plt.gca().invert_yaxis()
-    plt.savefig('/opt/my_application/Images/Scatter.png')
+    plt.savefig(path,'Scatter.png')
 
 
 
@@ -63,7 +65,7 @@ def main():
     plt.scatter(x,y,c=c,s=4)
     cbar = plt.colorbar()
     cbar.set_label("Gyr")
-    plt.savefig('/opt/my_application/Images/Scatter_optional.png')
+    plt.savefig(path,'Scatter_optional.png')
 
 
 
@@ -90,7 +92,7 @@ def main():
     plt.hist(h[-1],density=True, **kwargs, label="age_parant > {:.1f} Gyr".format(n[-1]))
 
     plt.legend()
-    plt.savefig('/opt/my_application/Images/Histogram1.png')
+    plt.savefig(path,'Histogram1.png')
 
 
 
@@ -116,7 +118,7 @@ def main():
     plt.hist(h[-1],density=True, **kwargs, label="age_parant > {:.1f} Gyr".format(n[-1]))
 
     plt.legend()
-    plt.savefig('/opt/my_application/Images/Histogram2.png')
+    plt.savefig(path,'Histogram2.png')
 
     print("Plots saved in /opt/my_application/Images")
 
