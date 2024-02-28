@@ -1,5 +1,5 @@
-# Project for the exam abilità informatiche
-This repository was created as the project for the exam of abilità informatiche @ UniTs 2023/2024.
+# Project for the exam of Computer and Telematic Abilities
+This repository was created as the project for the exam of Computer and Telematic Abilities @ UniTs 2023/2024.
 ## Installation
 The following packages are necessary for the execution of the python script:
 * `Matplotlib`
