@@ -30,5 +30,5 @@ The script produces the following plots:
   <img width="600" src="https://github.com/oooidw/Esame_Ab_Inf/blob/main/Images/Plot3.png">
 </p>
 <p align="center">
-  <img width="800" src="https://github.com/oooidw/Esame_Ab_Inf/blob/main/Images/Plot3_opt.png">
+  <img width="1200" src="https://github.com/oooidw/Esame_Ab_Inf/blob/main/Images/Plot3_opt.png">
 </p>
