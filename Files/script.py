@@ -209,19 +209,19 @@ def main():
 
     # Plot the first figure
     axes[0].hist2d(x[0],y[0], **kwargs)
-    axes[0].legend("age_parent < {:.1f} Gyr".format(n[0]))
+    axes[0].legend([],title="age_parent < {:.1f} Gyr".format(n[0]))
     axes[0].set_xlabel(r"m_ini")
 
     # Plot the middle figures
     for i in range(1, len(n)):
         axes[i].set_xlim(0,6)
         axes[i].hist2d(x[i],y[i], **kwargs)
-        axes[i].legend("{:.1f} Gyr < age_parent < {:.1f} Gyr".format(n[i-1], n[i]))
+        axes[i].legend([],title="{:.1f} Gyr < age_parent < {:.1f} Gyr".format(n[i-1], n[i]))
         axes[i].set_xlabel(r"m_ini")
 
     # Plot the last figure
     axes[-1].hist2d(x[-1],y[-1], **kwargs)
-    axes[-1].legend("age_parent > {:.1f} Gyr".format(n[-1]))
+    axes[-1].legend([],title="age_parent > {:.1f} Gyr".format(n[-1]))
     axes[-1].set_xlabel(r"m_ini")
 
 
